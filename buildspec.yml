@@ -15,6 +15,7 @@ phases:
     commands:
       - echo "Logging in to Docker Hub..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
+      - pip install -r Gokuhj/aws/requirements.txt
 
   build:
     commands:
